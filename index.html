@@ -951,7 +951,7 @@
             <div class="projects-grid">
                 <div class="project-card fade-in" onclick="openModal('modal1')">
                     <div class="project-image">
-                        <i class="fas fa-cloud"></i>
+                        <img src="images/argocd.png" alt="DevOps Infrastructure" style="width:100%; height:100%; object-fit:cover;">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">DevOps Infrastructure Project</h3>
@@ -1048,19 +1048,20 @@
 
                 <div class="project-card fade-in" onclick="openModal('modal6')">
                     <div class="project-image">
-                        <i class="fas fa-dumbbell"></i>
+                        <img src="images/home_screen_2.png" alt="FitFlow" style="width:100%; height:100%; object-fit:cover;">
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">FitFlow - Fitness Tracker</h3>
                         <p class="project-description">
-                            Comprehensive fitness platform with workout tracking, nutrition monitoring, AI coach, 
-                            8 interactive dashboards, and Docker deployment with 100+ tests.
+                            Comprehensive fitness platform with workout tracking, nutrition monitoring, progress photos, AI coach, 
+                            interactive analytics dashboards, and Docker deployment with 90+ comprehensive tests.
                         </p>
                         <div class="project-tags">
                             <span class="tag">React</span>
                             <span class="tag">Node.js</span>
                             <span class="tag">MongoDB</span>
                             <span class="tag">Docker</span>
+                            <span class="tag">Mistral AI</span>
                             <span class="tag">Jest</span>
                         </div>
                     </div>
@@ -1414,51 +1415,90 @@
             </div>
             <div class="modal-body">
                 <div class="modal-images">
-                    <div class="modal-image"><i class="fas fa-dumbbell"></i></div>
-                    <div class="modal-image"><i class="fas fa-apple-alt"></i></div>
-                    <div class="modal-image"><i class="fas fa-chart-line"></i></div>
+                    <div class="modal-image">
+                        <img src="images/home_screen_1.png" alt="FitFlow Home Screen" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                    </div>
+                    <div class="modal-image">
+                        <img src="images/overview_tab.png" alt="Dashboard Overview" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                    </div>
+                    <div class="modal-image">
+                        <img src="images/analytics_tab.png" alt="Analytics Dashboard" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                    </div>
                 </div>
                 
                 <div class="modal-section">
                     <h3>Project Overview</h3>
-                    <p>FitFlow is a full-stack fitness and nutrition tracking platform designed to help users achieve their health goals. Features comprehensive workout tracking, nutrition monitoring, progress photos, and an AI-powered fitness coach.</p>
+                    <p>FitFlow is a full-stack fitness tracking platform that helps users monitor their nutrition, workouts, progress photos, and fitness goals with advanced analytics and an AI-powered coach. Built with modern web technologies and containerized with Docker for seamless deployment.</p>
                 </div>
 
                 <div class="modal-section">
-                    <h3>Key Features</h3>
+                    <h3>Core Features</h3>
                     <ul>
-                        <li><strong>Workout Tracking:</strong> Log exercises, sets, reps, and weights with detailed analytics</li>
-                        <li><strong>Nutrition Monitoring:</strong> Track calories, macros, and meals with barcode scanning</li>
-                        <li><strong>Progress Photos:</strong> Visual tracking with before/after comparisons</li>
-                        <li><strong>AI Fitness Coach:</strong> Personalized workout and nutrition recommendations</li>
-                        <li><strong>8 Interactive Dashboards:</strong> Comprehensive data visualization for all metrics</li>
-                        <li><strong>Docker Deployment:</strong> Containerized application for easy deployment</li>
-                        <li><strong>Comprehensive Testing:</strong> 100+ tests with Jest for reliability</li>
-                        <li><strong>Responsive Design:</strong> Works seamlessly on desktop and mobile devices</li>
+                        <li><strong>Dashboard Overview:</strong> Real-time fitness summary with key metrics including weekly workouts, daily calories, current weight & BMI, and active streak</li>
+                        <li><strong>Workout Tracking:</strong> Log exercises with duration, difficulty levels, and comprehensive workout history with date filtering (Today/Week/Month/Year)</li>
+                        <li><strong>Nutrition Tracker:</strong> Track daily meals by type (Breakfast, Lunch, Dinner, Snack) with complete macronutrient breakdown (protein, carbs, fats) and visual charts</li>
+                        <li><strong>Progress Gallery:</strong> Upload and visualize transformation photos over time to track your fitness journey</li>
+                        <li><strong>Goals Management:</strong> Set measurable fitness milestones with visual progress bars and celebrate achievements</li>
+                        <li><strong>Analytics & Stats:</strong> 4 interactive charts showing workout frequency, calorie intake trends, macros breakdown, and duration patterns</li>
+                        <li><strong>BMR/TDEE Calculator:</strong> Calculate daily calorie needs based on personal metrics with calculation history</li>
+                        <li><strong>Nutrition Trivia:</strong> Interactive quiz game to test and improve your nutrition knowledge</li>
+                        <li><strong>AI Fitness Coach:</strong> Get personalized fitness and nutrition advice 24/7 powered by Mistral AI</li>
+                        <li><strong>Profile Management:</strong> Complete user profile with the ability to update personal info, fitness goals, and change password securely</li>
                     </ul>
                 </div>
 
                 <div class="modal-section">
-                    <h3>Technologies Used</h3>
+                    <h3>Screenshots Gallery</h3>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem;">
+                        <img src="images/workout_tab.png" alt="Workout Tracking" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                        <img src="images/nutrition_tab.png" alt="Nutrition Tracking" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                        <img src="images/goals_tab.png" alt="Goals Management" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                        <img src="images/progress_gallery_tab.png" alt="Progress Photos" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                        <img src="images/AI_coach_tab.png" alt="AI Coach" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                        <img src="images/calorie_calculator_tab.png" alt="Calorie Calculator" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                        <img src="images/nutrition_trivia_tab.png" alt="Nutrition Trivia" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                        <img src="images/profile_tab.png" alt="User Profile" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Tech Stack</h3>
                     <ul>
-                        <li>React for frontend with modern hooks</li>
-                        <li>Node.js & Express for backend API</li>
-                        <li>MongoDB for database storage</li>
-                        <li>Docker for containerization</li>
-                        <li>Jest for comprehensive testing</li>
-                        <li>Chart.js for data visualization</li>
-                        <li>Nginx for reverse proxy</li>
+                        <li><strong>Frontend:</strong> React 18 with Vite, Recharts for data visualization, Lucide React icons, Modern CSS3 with glassmorphism design</li>
+                        <li><strong>Backend:</strong> Node.js with Express.js, MongoDB with Mongoose ODM, JWT authentication, Bcrypt password hashing, Mistral AI integration</li>
+                        <li><strong>DevOps:</strong> Docker & Docker Compose, Nginx reverse proxy, Multi-stage builds for optimization</li>
+                        <li><strong>Testing:</strong> Jest & Supertest with 90+ comprehensive tests covering all API endpoints</li>
+                        <li><strong>File Handling:</strong> Multer for progress photo uploads with persistent storage</li>
                     </ul>
                 </div>
 
                 <div class="modal-section">
                     <h3>Technical Achievements</h3>
                     <ul>
-                        <li>Developed 8 interactive dashboards with advanced data visualization</li>
-                        <li>Implemented AI-powered recommendations engine</li>
-                        <li>Created comprehensive test suite with 100+ tests</li>
-                        <li>Designed responsive UI that works across all devices</li>
-                        <li>Built Docker deployment with Nginx reverse proxy</li>
+                        <li><strong>Comprehensive Testing:</strong> 90 tests across 10 test suites covering authentication, CRUD operations, analytics, edge cases, and error handling</li>
+                        <li><strong>RESTful API Architecture:</strong> Well-structured API with 11 dedicated controllers for different features</li>
+                        <li><strong>AI Integration:</strong> Mistral AI-powered coach providing personalized fitness advice with natural language processing</li>
+                        <li><strong>Advanced Analytics:</strong> Real-time data visualization with filtering by Today/Week/Month/Year across all tracking features</li>
+                        <li><strong>Docker Containerization:</strong> Complete Docker Compose setup with health checks, volume persistence, and optimized multi-stage builds</li>
+                        <li><strong>Security:</strong> JWT-based authentication, bcrypt password hashing, secure password requirements (8+ chars, uppercase, lowercase, number, special char)</li>
+                        <li><strong>Responsive Design:</strong> Mobile-first approach ensuring perfect functionality on all device sizes</li>
+                        <li><strong>User Experience:</strong> Intuitive interface with modal-based editing, real-time feedback, and smooth animations</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>API Endpoints</h3>
+                    <p>Complete RESTful API with endpoints for:</p>
+                    <ul>
+                        <li>Authentication (register, login)</li>
+                        <li>User management (profile, stats, password change)</li>
+                        <li>Workouts (CRUD with period filtering)</li>
+                        <li>Nutrition tracking (meals CRUD with date filtering)</li>
+                        <li>Goals management (CRUD with progress tracking)</li>
+                        <li>Analytics (workout stats, nutrition stats, dashboard overview)</li>
+                        <li>Progress photos (upload, retrieve, delete)</li>
+                        <li>Trivia game (questions, answers, statistics)</li>
+                        <li>Calculator (BMR/TDEE calculation with history)</li>
                     </ul>
                 </div>
             </div>
