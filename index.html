@@ -254,9 +254,27 @@
 
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 300px 1fr;
             gap: 3rem;
             align-items: center;
+        }
+
+        .about-image-container {
+            position: relative;
+        }
+
+        .profile-photo {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 20px;
+            border: 3px solid var(--primary);
+            box-shadow: 0 10px 40px rgba(192, 132, 252, 0.4);
+            transition: all 0.3s;
+        }
+
+        .profile-photo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(192, 132, 252, 0.6);
         }
 
         .about-text h3 {
@@ -851,6 +869,9 @@
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content fade-in">
+                <div class="about-image-container">
+                    <img src="images/profile-photo.jpg" alt="Lir Chen" class="profile-photo">
+                </div>
                 <div class="about-text">
                     <h3>DevOps Engineer & Full-Stack Developer</h3>
                     <p>
@@ -867,23 +888,23 @@
                         apply my diverse skill set and continue growing professionally.
                     </p>
                 </div>
-                <div class="stats">
-                    <div class="stat-box">
-                        <div class="number">6+</div>
-                        <div class="label">Years Leadership</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="number">1000</div>
-                        <div class="label">DevOps Training Hours</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="number">B.Sc.</div>
-                        <div class="label">Computer Science</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="number">10+</div>
-                        <div class="label">Major Projects</div>
-                    </div>
+            </div>
+            <div class="stats fade-in">
+                <div class="stat-box">
+                    <div class="number">6+</div>
+                    <div class="label">Years Leadership</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">1000</div>
+                    <div class="label">DevOps Training Hours</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">B.Sc.</div>
+                    <div class="label">Computer Science</div>
+                </div>
+                <div class="stat-box">
+                    <div class="number">10+</div>
+                    <div class="label">Major Projects</div>
                 </div>
             </div>
         </div>
