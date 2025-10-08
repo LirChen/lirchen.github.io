@@ -14,13 +14,17 @@
         }
 
         :root {
-            --primary: #2E8B57;
-            --secondary: #1a5c3a;
-            --dark: #0a1628;
+            --primary: #c084fc;
+            --secondary: #a855f7;
+            --dark: #1a0b2e;
             --light: #f8f9fa;
-            --accent: #3abf87;
+            --accent: #e879f9;
+            --pink: #f472b6;
+            --purple-light: #ddd6fe;
             --text-dark: #2c3e50;
-            --text-light: #ecf0f1;
+            --text-light: #f3e8ff;
+            --gradient-1: linear-gradient(135deg, #c084fc 0%, #e879f9 100%);
+            --gradient-2: linear-gradient(135deg, #a855f7 0%, #f472b6 100%);
         }
 
         body {
@@ -42,11 +46,11 @@
             position: fixed;
             width: 100%;
             top: 0;
-            background: rgba(10, 22, 40, 0.95);
+            background: rgba(26, 11, 46, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
             padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 10px rgba(192, 132, 252, 0.3);
         }
 
         nav .container {
@@ -58,7 +62,10 @@
         nav .logo {
             font-size: 1.5rem;
             font-weight: bold;
-            color: var(--primary);
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         nav ul {
@@ -75,7 +82,7 @@
         }
 
         nav a:hover {
-            color: var(--primary);
+            color: var(--accent);
         }
 
         /* Hero Section */
@@ -86,7 +93,7 @@
             justify-content: center;
             text-align: center;
             padding: 100px 20px 50px;
-            background: linear-gradient(135deg, var(--dark) 0%, #1a2332 100%);
+            background: linear-gradient(135deg, var(--dark) 0%, #2d1b4e 100%);
             position: relative;
             overflow: hidden;
         }
@@ -97,15 +104,27 @@
             width: 500px;
             height: 500px;
             background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
-            opacity: 0.1;
+            opacity: 0.15;
             top: -250px;
             right: -250px;
             animation: pulse 4s ease-in-out infinite;
         }
 
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--pink) 0%, transparent 70%);
+            opacity: 0.1;
+            bottom: -200px;
+            left: -200px;
+            animation: pulse 5s ease-in-out infinite;
+        }
+
         @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.1; }
-            50% { transform: scale(1.1); opacity: 0.15; }
+            0%, 100% { transform: scale(1); opacity: 0.15; }
+            50% { transform: scale(1.1); opacity: 0.2; }
         }
 
         .hero-content {
@@ -116,7 +135,7 @@
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
-            background: linear-gradient(120deg, var(--primary), var(--accent));
+            background: var(--gradient-1);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -132,7 +151,7 @@
 
         .hero .description {
             font-size: 1.1rem;
-            color: #b0c4de;
+            color: var(--purple-light);
             max-width: 800px;
             margin: 0 auto 2rem;
             animation: fadeInUp 0.8s ease-out 0.4s both;
@@ -172,14 +191,14 @@
         }
 
         .btn-primary {
-            background: var(--primary);
+            background: var(--gradient-1);
             color: white;
         }
 
         .btn-primary:hover {
-            background: var(--secondary);
+            background: var(--gradient-2);
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(46, 139, 87, 0.4);
+            box-shadow: 0 5px 20px rgba(192, 132, 252, 0.5);
         }
 
         .btn-secondary {
@@ -209,7 +228,10 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: var(--primary);
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             position: relative;
             padding-bottom: 1rem;
         }
@@ -222,12 +244,12 @@
             transform: translateX(-50%);
             width: 100px;
             height: 3px;
-            background: var(--primary);
+            background: var(--gradient-1);
         }
 
         /* About Section */
         .about {
-            background: #0f1a2b;
+            background: #1f0e3d;
         }
 
         .about-content {
@@ -245,7 +267,7 @@
 
         .about-text p {
             margin-bottom: 1rem;
-            color: #b0c4de;
+            color: var(--purple-light);
             line-height: 1.8;
         }
 
@@ -257,27 +279,31 @@
         }
 
         .stat-box {
-            background: rgba(46, 139, 87, 0.1);
+            background: rgba(192, 132, 252, 0.1);
             padding: 1.5rem;
-            border-radius: 10px;
-            border: 1px solid var(--primary);
+            border-radius: 15px;
+            border: 2px solid var(--primary);
             text-align: center;
-            transition: transform 0.3s;
+            transition: all 0.3s;
         }
 
         .stat-box:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(46, 139, 87, 0.3);
+            box-shadow: 0 8px 25px rgba(192, 132, 252, 0.4);
+            border-color: var(--accent);
         }
 
         .stat-box .number {
             font-size: 2.5rem;
             font-weight: bold;
-            color: var(--primary);
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .stat-box .label {
-            color: #b0c4de;
+            color: var(--purple-light);
             margin-top: 0.5rem;
         }
 
@@ -294,23 +320,27 @@
         }
 
         .tech-item {
-            background: rgba(46, 139, 87, 0.1);
+            background: rgba(192, 132, 252, 0.1);
             padding: 1.5rem;
-            border-radius: 10px;
+            border-radius: 15px;
             text-align: center;
             transition: all 0.3s;
-            border: 1px solid transparent;
+            border: 2px solid transparent;
         }
 
         .tech-item:hover {
             transform: translateY(-5px);
-            border-color: var(--primary);
-            box-shadow: 0 5px 20px rgba(46, 139, 87, 0.3);
+            border-color: var(--accent);
+            box-shadow: 0 8px 25px rgba(192, 132, 252, 0.4);
+            background: rgba(192, 132, 252, 0.15);
         }
 
         .tech-item i {
             font-size: 3rem;
-            color: var(--primary);
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 1rem;
         }
 
@@ -322,7 +352,7 @@
 
         /* Projects */
         .projects {
-            background: #0f1a2b;
+            background: #1f0e3d;
         }
 
         .projects-grid {
@@ -333,27 +363,47 @@
 
         .project-card {
             background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
+            border-radius: 20px;
             overflow: hidden;
             transition: all 0.3s;
-            border: 1px solid rgba(46, 139, 87, 0.2);
+            border: 2px solid rgba(192, 132, 252, 0.3);
+            cursor: pointer;
         }
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(46, 139, 87, 0.3);
-            border-color: var(--primary);
+            box-shadow: 0 15px 40px rgba(192, 132, 252, 0.4);
+            border-color: var(--accent);
         }
 
         .project-image {
             width: 100%;
             height: 200px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: var(--gradient-1);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 4rem;
-            color: rgba(255, 255, 255, 0.3);
+            color: rgba(255, 255, 255, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image::after {
+            content: 'Click for details';
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .project-card:hover .project-image::after {
+            opacity: 1;
         }
 
         .project-content {
@@ -362,12 +412,15 @@
 
         .project-title {
             font-size: 1.5rem;
-            color: var(--primary);
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 0.5rem;
         }
 
         .project-description {
-            color: #b0c4de;
+            color: var(--purple-light);
             margin-bottom: 1rem;
             line-height: 1.6;
         }
@@ -380,11 +433,12 @@
         }
 
         .tag {
-            background: rgba(46, 139, 87, 0.2);
+            background: rgba(192, 132, 252, 0.2);
             padding: 0.3rem 0.8rem;
             border-radius: 20px;
             font-size: 0.85rem;
             color: var(--accent);
+            border: 1px solid var(--primary);
         }
 
         .project-links {
@@ -405,6 +459,171 @@
             color: var(--accent);
         }
 
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow-y: auto;
+            animation: fadeIn 0.3s;
+        }
+
+        .modal.active {
+            display: block;
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #1f0e3d 0%, #2d1b4e 100%);
+            margin: 3% auto;
+            padding: 0;
+            border: 2px solid var(--primary);
+            border-radius: 20px;
+            width: 90%;
+            max-width: 900px;
+            position: relative;
+            animation: slideDown 0.3s;
+            box-shadow: 0 20px 60px rgba(192, 132, 252, 0.5);
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .modal-header {
+            background: var(--gradient-1);
+            padding: 2rem;
+            border-radius: 18px 18px 0 0;
+            position: relative;
+        }
+
+        .modal-header h2 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-header .project-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+        }
+
+        .close {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .close:hover {
+            transform: rotate(90deg);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .modal-body {
+            padding: 2rem;
+            color: var(--purple-light);
+        }
+
+        .modal-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 200px;
+            background: var(--gradient-2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.3);
+            border: 2px solid var(--primary);
+        }
+
+        .modal-section {
+            margin-bottom: 2rem;
+        }
+
+        .modal-section h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+        }
+
+        .modal-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .modal-section li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .modal-section li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+        }
+
+        .modal-footer {
+            padding: 1.5rem 2rem;
+            background: rgba(192, 132, 252, 0.1);
+            border-radius: 0 0 18px 18px;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .modal-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 10px 20px;
+            background: var(--gradient-1);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .modal-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(192, 132, 252, 0.5);
+        }
+
         /* Experience */
         .experience {
             background: var(--dark);
@@ -422,9 +641,9 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            width: 2px;
+            width: 3px;
             height: 100%;
-            background: var(--primary);
+            background: var(--gradient-1);
         }
 
         .timeline-item {
@@ -433,12 +652,19 @@
         }
 
         .timeline-content {
-            background: rgba(46, 139, 87, 0.1);
+            background: rgba(192, 132, 252, 0.1);
             padding: 1.5rem;
-            border-radius: 10px;
-            border: 1px solid var(--primary);
+            border-radius: 15px;
+            border: 2px solid var(--primary);
             width: 45%;
             position: relative;
+            transition: all 0.3s;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(192, 132, 252, 0.4);
+            border-color: var(--accent);
         }
 
         .timeline-item:nth-child(odd) .timeline-content {
@@ -446,7 +672,10 @@
         }
 
         .timeline-content h3 {
-            color: var(--primary);
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             margin-bottom: 0.5rem;
         }
 
@@ -457,13 +686,13 @@
         }
 
         .timeline-content p {
-            color: #b0c4de;
+            color: var(--purple-light);
             line-height: 1.6;
         }
 
         /* Contact */
         .contact {
-            background: #0f1a2b;
+            background: #1f0e3d;
             text-align: center;
         }
 
@@ -481,9 +710,9 @@
             align-items: center;
             gap: 0.5rem;
             padding: 1.5rem;
-            background: rgba(46, 139, 87, 0.1);
-            border-radius: 10px;
-            border: 1px solid var(--primary);
+            background: rgba(192, 132, 252, 0.1);
+            border-radius: 15px;
+            border: 2px solid var(--primary);
             transition: all 0.3s;
             text-decoration: none;
             color: inherit;
@@ -492,12 +721,17 @@
 
         .contact-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(46, 139, 87, 0.3);
+            box-shadow: 0 8px 25px rgba(192, 132, 252, 0.4);
+            border-color: var(--accent);
+            background: rgba(192, 132, 252, 0.15);
         }
 
         .contact-item i {
             font-size: 2rem;
-            color: var(--primary);
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .contact-item span {
@@ -509,11 +743,11 @@
             background: var(--dark);
             text-align: center;
             padding: 2rem;
-            border-top: 1px solid rgba(46, 139, 87, 0.3);
+            border-top: 2px solid rgba(192, 132, 252, 0.3);
         }
 
         footer p {
-            color: #b0c4de;
+            color: var(--purple-light);
         }
 
         /* Responsive */
@@ -554,6 +788,15 @@
             .contact-links {
                 flex-direction: column;
                 align-items: center;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+            }
+
+            .modal-body {
+                padding: 1rem;
             }
         }
 
@@ -706,7 +949,7 @@
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
-                <div class="project-card fade-in">
+                <div class="project-card fade-in" onclick="openModal('modal1')">
                     <div class="project-image">
                         <i class="fas fa-cloud"></i>
                     </div>
@@ -723,18 +966,10 @@
                             <span class="tag">ArgoCD</span>
                             <span class="tag">Grafana</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/LirChen/DevOps_Infrastructure_Project" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="https://lnkd.in/p/gEsx_zqx" target="_blank" class="project-link">
-                                <i class="fas fa-play-circle"></i> Demo
-                            </a>
-                        </div>
                     </div>
                 </div>
 
-                <div class="project-card fade-in">
+                <div class="project-card fade-in" onclick="openModal('modal2')">
                     <div class="project-image">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
@@ -750,18 +985,10 @@
                             <span class="tag">MongoDB</span>
                             <span class="tag">Socket.IO</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/LirChen/Flavor_World_Final_Project" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="https://lnkd.in/p/gd4WFsUQ" target="_blank" class="project-link">
-                                <i class="fas fa-play-circle"></i> Demo
-                            </a>
-                        </div>
                     </div>
                 </div>
 
-                <div class="project-card fade-in">
+                <div class="project-card fade-in" onclick="openModal('modal3')">
                     <div class="project-image">
                         <i class="fas fa-server"></i>
                     </div>
@@ -777,18 +1004,10 @@
                             <span class="tag">MongoDB</span>
                             <span class="tag">Jest</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/LirChen/Node.js_RESTful_API" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="https://www.youtube.com/watch?v=QDyM50J_zkc" target="_blank" class="project-link">
-                                <i class="fas fa-play-circle"></i> Demo
-                            </a>
-                        </div>
                     </div>
                 </div>
 
-                <div class="project-card fade-in">
+                <div class="project-card fade-in" onclick="openModal('modal4')">
                     <div class="project-image">
                         <i class="fas fa-lock"></i>
                     </div>
@@ -805,15 +1024,10 @@
                             <span class="tag">Kafka</span>
                             <span class="tag">Docker</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/LirChen/fullstack_auth_app" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
                     </div>
                 </div>
 
-                <div class="project-card fade-in">
+                <div class="project-card fade-in" onclick="openModal('modal5')">
                     <div class="project-image">
                         <i class="fab fa-python"></i>
                     </div>
@@ -829,15 +1043,10 @@
                             <span class="tag">AWS</span>
                             <span class="tag">Tkinter</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/LirChen/AWS_Resource_manager_cli_and_ui" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
                     </div>
                 </div>
 
-                <div class="project-card fade-in">
+                <div class="project-card fade-in" onclick="openModal('modal6')">
                     <div class="project-image">
                         <i class="fas fa-dumbbell"></i>
                     </div>
@@ -854,16 +1063,412 @@
                             <span class="tag">Docker</span>
                             <span class="tag">Jest</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/LirChen" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Modals for Projects -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <h2>DevOps Infrastructure Project</h2>
+                <p class="project-subtitle">Enterprise-Grade Cloud Infrastructure with GitOps</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-images">
+                    <div class="modal-image"><i class="fas fa-server"></i></div>
+                    <div class="modal-image"><i class="fas fa-network-wired"></i></div>
+                    <div class="modal-image"><i class="fas fa-chart-area"></i></div>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Project Overview</h3>
+                    <p>This project demonstrates a production-ready AWS infrastructure with complete CI/CD pipeline, comprehensive monitoring, and GitOps deployment strategy. Built with infrastructure-as-code principles using Terraform and deployed to AWS EKS cluster.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><strong>Production-Ready AWS Infrastructure:</strong> Complete EKS cluster with PostgreSQL RDS and ElastiCache Redis</li>
+                        <li><strong>Multi-Worker Node Setup:</strong> Proper resource allocation with auto-scaling capabilities</li>
+                        <li><strong>GitOps Deployment:</strong> ArgoCD for automated sync, rollback, and deployment management</li>
+                        <li><strong>Comprehensive Monitoring:</strong> Real-time cluster metrics with Grafana dashboards and Prometheus</li>
+                        <li><strong>Status Page Integration:</strong> Public status monitoring for all infrastructure components</li>
+                        <li><strong>Security & Networking:</strong> VPC with public/private subnets, NAT Gateway, Application Load Balancer, and Network Load Balancer</li>
+                        <li><strong>Infrastructure as Code:</strong> Complete Terraform modules for reproducible deployments</li>
+                        <li><strong>Helm Charts:</strong> Kubernetes package management for easy deployment</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Technologies Used</h3>
+                    <ul>
+                        <li>AWS (EKS, EC2, RDS, ElastiCache, VPC, S3, ECR, Secrets Manager, Load Balancers)</li>
+                        <li>Terraform for infrastructure provisioning</li>
+                        <li>Kubernetes with Helm for container orchestration</li>
+                        <li>ArgoCD for GitOps deployment</li>
+                        <li>Prometheus & Grafana for monitoring and alerting</li>
+                        <li>Docker for containerization</li>
+                        <li>GitHub Actions for CI/CD</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Technical Achievements</h3>
+                    <ul>
+                        <li>Designed and implemented secure VPC architecture with proper subnet isolation</li>
+                        <li>Configured auto-scaling for optimal resource utilization</li>
+                        <li>Set up comprehensive monitoring with custom Grafana dashboards</li>
+                        <li>Implemented GitOps workflow for version-controlled infrastructure changes</li>
+                        <li>Created reusable Terraform modules for infrastructure components</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="https://github.com/LirChen/DevOps_Infrastructure_Project" target="_blank" class="modal-link">
+                    <i class="fab fa-github"></i> View Code
+                </a>
+                <a href="https://lnkd.in/p/gEsx_zqx" target="_blank" class="modal-link">
+                    <i class="fas fa-play-circle"></i> Watch Demo
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <h2>FlavorWorld - Recipe Social Network</h2>
+                <p class="project-subtitle">Modern Social Platform for Recipe Sharing</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-images">
+                    <div class="modal-image"><i class="fas fa-mobile-alt"></i></div>
+                    <div class="modal-image"><i class="fas fa-comments"></i></div>
+                    <div class="modal-image"><i class="fas fa-users"></i></div>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Project Overview</h3>
+                    <p>FlavorWorld is a full-stack social networking application built for recipe enthusiasts. Features include real-time messaging, group functionality, social interactions, and a comprehensive recipe management system. Built with React Native for mobile and React for web platforms.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><strong>React Native Mobile App:</strong> Cross-platform mobile application with native performance</li>
+                        <li><strong>Microservices Backend:</strong> API Gateway with specialized services (Auth, User, Recipe, Group, Chat)</li>
+                        <li><strong>Real-time Communication:</strong> Socket.IO integration for instant messaging and typing indicators</li>
+                        <li><strong>Social Features:</strong> Follow system, groups, likes, comments, and push notifications</li>
+                        <li><strong>Recipe Management:</strong> Create, share, and discover recipes with photo uploads</li>
+                        <li><strong>Group Chat:</strong> Create cooking groups with real-time messaging</li>
+                        <li><strong>User Authentication:</strong> Secure JWT-based authentication with email verification</li>
+                        <li><strong>File Upload:</strong> Multi-image upload for recipe photos</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Technologies Used</h3>
+                    <ul>
+                        <li>React Native & Expo for mobile development</li>
+                        <li>React for web interface</li>
+                        <li>Node.js & Express for backend APIs</li>
+                        <li>Socket.IO for real-time features</li>
+                        <li>MongoDB for database with optimized schemas</li>
+                        <li>JWT for authentication</li>
+                        <li>Multer for file uploads</li>
+                        <li>Push notifications integration</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Technical Achievements</h3>
+                    <ul>
+                        <li>Implemented microservices architecture with API gateway pattern</li>
+                        <li>Built real-time chat with Socket.IO including typing indicators and online status</li>
+                        <li>Designed scalable MongoDB schemas for social networking features</li>
+                        <li>Created responsive UI components for both mobile and web platforms</li>
+                        <li>Integrated push notifications for user engagement</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="https://github.com/LirChen/Flavor_World_Final_Project" target="_blank" class="modal-link">
+                    <i class="fab fa-github"></i> View Code
+                </a>
+                <a href="https://lnkd.in/p/gd4WFsUQ" target="_blank" class="modal-link">
+                    <i class="fas fa-play-circle"></i> Watch Demo
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal('modal3')">&times;</span>
+                <h2>Cost Manager - RESTful API</h2>
+                <p class="project-subtitle">Enterprise Expense Management System</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-images">
+                    <div class="modal-image"><i class="fas fa-receipt"></i></div>
+                    <div class="modal-image"><i class="fas fa-chart-pie"></i></div>
+                    <div class="modal-image"><i class="fas fa-database"></i></div>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Project Overview</h3>
+                    <p>A comprehensive expense management system with a professional RESTful API backend. Features include CRUD operations, monthly reporting, automated testing, and production deployment with health monitoring.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><strong>RESTful API:</strong> Complete CRUD operations following REST principles</li>
+                        <li><strong>MongoDB Atlas Integration:</strong> Cloud database with Mongoose ODM and optimized schemas</li>
+                        <li><strong>Computed Pattern:</strong> Cached monthly reports for improved performance</li>
+                        <li><strong>Professional Logging:</strong> Pino logger for structured logging</li>
+                        <li><strong>Comprehensive Testing:</strong> Jest test suite with Supertest for API testing</li>
+                        <li><strong>Production Deployment:</strong> Hosted on Render with health check endpoints</li>
+                        <li><strong>API Documentation:</strong> Complete API documentation with examples</li>
+                        <li><strong>Error Handling:</strong> Robust error handling with meaningful error messages</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Technologies Used</h3>
+                    <ul>
+                        <li>Node.js & Express.js for API development</li>
+                        <li>MongoDB Atlas for cloud database</li>
+                        <li>Mongoose for data modeling</li>
+                        <li>Jest & Supertest for testing</li>
+                        <li>Pino for logging</li>
+                        <li>Render for deployment</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Technical Achievements</h3>
+                    <ul>
+                        <li>Implemented computed pattern for optimized monthly report generation</li>
+                        <li>Created comprehensive test coverage with Jest</li>
+                        <li>Designed RESTful API following industry best practices</li>
+                        <li>Deployed to production with continuous health monitoring</li>
+                        <li>Structured logging for debugging and monitoring</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="https://github.com/LirChen/Node.js_RESTful_API" target="_blank" class="modal-link">
+                    <i class="fab fa-github"></i> View Code
+                </a>
+                <a href="https://www.youtube.com/watch?v=QDyM50J_zkc" target="_blank" class="modal-link">
+                    <i class="fas fa-play-circle"></i> Watch Demo
+                </a>
+                <a href="https://final-project-server-side-h0n0.onrender.com" target="_blank" class="modal-link">
+                    <i class="fas fa-globe"></i> Live API
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal('modal4')">&times;</span>
+                <h2>Full-Stack Auth with Event Streaming</h2>
+                <p class="project-subtitle">Enterprise Authentication with Kafka Integration</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-images">
+                    <div class="modal-image"><i class="fas fa-user-shield"></i></div>
+                    <div class="modal-image"><i class="fas fa-stream"></i></div>
+                    <div class="modal-image"><i class="fas fa-docker"></i></div>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Project Overview</h3>
+                    <p>An enterprise-grade authentication system demonstrating microservices architecture with event-driven design. Features distributed database with change data capture and real-time activity logging through Kafka.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><strong>Microservices Architecture:</strong> React frontend, Node.js API, and Kafka consumer services</li>
+                        <li><strong>Distributed Database:</strong> TiDB for scalable, MySQL-compatible distributed SQL</li>
+                        <li><strong>Change Data Capture:</strong> TiCDC for real-time database change streaming</li>
+                        <li><strong>Event-Driven Processing:</strong> Kafka for asynchronous activity logging and processing</li>
+                        <li><strong>Containerized Deployment:</strong> Complete Docker Compose orchestration</li>
+                        <li><strong>Advanced Monitoring:</strong> Custom logging and database change tracking</li>
+                        <li><strong>User Management Dashboard:</strong> Real-time profile information and system analytics</li>
+                        <li><strong>Secure Authentication:</strong> JWT-based auth with modern login interface</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Technologies Used</h3>
+                    <ul>
+                        <li>React for frontend dashboard</li>
+                        <li>Node.js & Express for API services</li>
+                        <li>TiDB distributed SQL database</li>
+                        <li>TiCDC for change data capture</li>
+                        <li>Apache Kafka for event streaming</li>
+                        <li>Docker & Docker Compose for containerization</li>
+                        <li>log4js for structured logging</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Technical Achievements</h3>
+                    <ul>
+                        <li>Implemented microservices architecture with event-driven design</li>
+                        <li>Integrated TiDB with TiCDC for real-time change data capture</li>
+                        <li>Built Kafka consumer for processing authentication events</li>
+                        <li>Created Docker Compose setup for complete local development environment</li>
+                        <li>Designed user management dashboard with real-time analytics</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="https://github.com/LirChen/fullstack_auth_app" target="_blank" class="modal-link">
+                    <i class="fab fa-github"></i> View Code
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal('modal5')">&times;</span>
+                <h2>AWS Resource Manager</h2>
+                <p class="project-subtitle">Python CLI & GUI for AWS Management</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-images">
+                    <div class="modal-image"><i class="fab fa-aws"></i></div>
+                    <div class="modal-image"><i class="fas fa-terminal"></i></div>
+                    <div class="modal-image"><i class="fas fa-window-maximize"></i></div>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Project Overview</h3>
+                    <p>A comprehensive AWS resource management tool featuring both CLI and GUI interfaces. Built with boto3 for programmatic AWS access, managing EC2 instances, S3 buckets, and Route53 DNS records with enforced IAM policies.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><strong>Python CLI:</strong> Command-line interface for AWS resource provisioning</li>
+                        <li><strong>GUI Application:</strong> User-friendly graphical interface for simplified management</li>
+                        <li><strong>Multi-Service Support:</strong> Manage EC2, S3, and Route53 resources</li>
+                        <li><strong>IAM Policy Enforcement:</strong> Automated security policies and permissions</li>
+                        <li><strong>Automated Tagging:</strong> Convention-based resource tagging for organization</li>
+                        <li><strong>Cost Optimization:</strong> Features for monitoring and reducing AWS costs</li>
+                        <li><strong>Resource Monitoring:</strong> Track resource usage and status</li>
+                        <li><strong>Batch Operations:</strong> Perform actions on multiple resources simultaneously</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Technologies Used</h3>
+                    <ul>
+                        <li>Python for core application logic</li>
+                        <li>Boto3 for AWS SDK integration</li>
+                        <li>Tkinter for GUI development</li>
+                        <li>AWS Services: EC2, S3, Route53, IAM</li>
+                        <li>argparse for CLI argument parsing</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Technical Achievements</h3>
+                    <ul>
+                        <li>Developed dual interface (CLI and GUI) for different user preferences</li>
+                        <li>Implemented automated IAM policy application for security compliance</li>
+                        <li>Created resource tagging system for better organization</li>
+                        <li>Built error handling and validation for AWS operations</li>
+                        <li>Designed intuitive GUI with Tkinter for non-technical users</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="https://github.com/LirChen/AWS_Resource_manager_cli_and_ui" target="_blank" class="modal-link">
+                    <i class="fab fa-github"></i> View Code
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" onclick="closeModal('modal6')">&times;</span>
+                <h2>FitFlow - Fitness Tracker</h2>
+                <p class="project-subtitle">Comprehensive Fitness & Nutrition Platform</p>
+            </div>
+            <div class="modal-body">
+                <div class="modal-images">
+                    <div class="modal-image"><i class="fas fa-dumbbell"></i></div>
+                    <div class="modal-image"><i class="fas fa-apple-alt"></i></div>
+                    <div class="modal-image"><i class="fas fa-chart-line"></i></div>
+                </div>
+                
+                <div class="modal-section">
+                    <h3>Project Overview</h3>
+                    <p>FitFlow is a full-stack fitness and nutrition tracking platform designed to help users achieve their health goals. Features comprehensive workout tracking, nutrition monitoring, progress photos, and an AI-powered fitness coach.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Key Features</h3>
+                    <ul>
+                        <li><strong>Workout Tracking:</strong> Log exercises, sets, reps, and weights with detailed analytics</li>
+                        <li><strong>Nutrition Monitoring:</strong> Track calories, macros, and meals with barcode scanning</li>
+                        <li><strong>Progress Photos:</strong> Visual tracking with before/after comparisons</li>
+                        <li><strong>AI Fitness Coach:</strong> Personalized workout and nutrition recommendations</li>
+                        <li><strong>8 Interactive Dashboards:</strong> Comprehensive data visualization for all metrics</li>
+                        <li><strong>Docker Deployment:</strong> Containerized application for easy deployment</li>
+                        <li><strong>Comprehensive Testing:</strong> 100+ tests with Jest for reliability</li>
+                        <li><strong>Responsive Design:</strong> Works seamlessly on desktop and mobile devices</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Technologies Used</h3>
+                    <ul>
+                        <li>React for frontend with modern hooks</li>
+                        <li>Node.js & Express for backend API</li>
+                        <li>MongoDB for database storage</li>
+                        <li>Docker for containerization</li>
+                        <li>Jest for comprehensive testing</li>
+                        <li>Chart.js for data visualization</li>
+                        <li>Nginx for reverse proxy</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Technical Achievements</h3>
+                    <ul>
+                        <li>Developed 8 interactive dashboards with advanced data visualization</li>
+                        <li>Implemented AI-powered recommendations engine</li>
+                        <li>Created comprehensive test suite with 100+ tests</li>
+                        <li>Designed responsive UI that works across all devices</li>
+                        <li>Built Docker deployment with Nginx reverse proxy</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="https://github.com/LirChen" target="_blank" class="modal-link">
+                    <i class="fab fa-github"></i> View Code
+                </a>
+            </div>
+        </div>
+    </div>
 
     <section id="experience" class="experience">
         <div class="container">
@@ -933,7 +1538,7 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Let's Connect</h2>
-            <p style="max-width: 600px; margin: 0 auto 2rem; color: #b0c4de;">
+            <p style="max-width: 600px; margin: 0 auto 2rem; color: var(--purple-light);">
                 I'm currently seeking DevOps Engineer or Software Developer opportunities. 
                 Feel free to reach out if you'd like to discuss potential collaborations or just connect!
             </p>
@@ -961,13 +1566,42 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 Lir Chen. All rights reserved.</p>
-            <p style="margin-top: 0.5rem; color: #7f8c8d;">
+            <p style="margin-top: 0.5rem; color: var(--purple-light);">
                 Built with passion | Combining DevOps expertise with software engineering
             </p>
         </div>
     </footer>
 
     <script>
+        // Modal functions
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                document.querySelectorAll('.modal').forEach(modal => {
+                    modal.classList.remove('active');
+                });
+                document.body.style.overflow = 'auto';
+            }
+        });
+
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
