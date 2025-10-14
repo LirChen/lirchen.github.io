@@ -844,6 +844,35 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        /* Resume Dropdown Styles */
+        .resume-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        #resumeDropdown a {
+            display: block;
+            padding: 10px 20px;
+            color: var(--text-light);
+            text-decoration: none;
+            transition: all 0.3s;
+            border-bottom: 1px solid rgba(192, 132, 252, 0.2);
+        }
+
+        #resumeDropdown a:last-child {
+            border-bottom: none;
+        }
+
+        #resumeDropdown a:hover {
+            background: rgba(192, 132, 252, 0.2);
+            color: var(--accent);
+            padding-left: 25px;
+        }
+
+        #resumeDropdown a i {
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -870,18 +899,26 @@
                 Computer Science graduate with DevOps training and 6 years of IDF leadership experience. 
                 Specializing in AWS, Kubernetes, Docker, and full-stack development.
             </p>
-            <div class="resume-dropdown" style="position: relative; display: inline-block;">
-                <button class="btn btn-primary" onclick="toggleDropdown()">
-                    <i class="fas fa-file-pdf"></i> View Resume ▼
-                </button>
-                <div id="resumeDropdown" style="display: none; position: absolute; background: rgba(26, 11, 46, 0.98); border: 2px solid var(--primary); border-radius: 10px; margin-top: 5px; z-index: 100;">
-                    <a href="resume/LIR_CHEN_DevOps_CV.pdf" target="_blank" style="display: block; padding: 10px 20px; color: var(--text-light); text-decoration: none;">
-                        <i class="fas fa-server"></i> DevOps Engineer
-                    </a>
-                    <a href="resume/LirChen_SoftwareDevelopment_CV.pdf" target="_blank" style="display: block; padding: 10px 20px; color: var(--text-light); text-decoration: none;">
-                        <i class="fas fa-code"></i> Software Developer
-                    </a>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i> View Projects
+                </a>
+                <div class="resume-dropdown" style="position: relative; display: inline-block;">
+                    <button class="btn btn-primary" onclick="toggleDropdown()">
+                        <i class="fas fa-file-pdf"></i> View Resume ▼
+                    </button>
+                    <div id="resumeDropdown" style="display: none; position: absolute; background: rgba(26, 11, 46, 0.98); border: 2px solid var(--primary); border-radius: 10px; margin-top: 5px; z-index: 100;">
+                        <a href="resume/LIR_CHEN_DevOps_CV.pdf" target="_blank" style="display: block; padding: 10px 20px; color: var(--text-light); text-decoration: none;">
+                            <i class="fas fa-server"></i> DevOps Engineer
+                        </a>
+                        <a href="resume/LirChen_SoftwareDevelopment_CV.pdf" target="_blank" style="display: block; padding: 10px 20px; color: var(--text-light); text-decoration: none;">
+                            <i class="fas fa-code"></i> Software Developer
+                        </a>
+                    </div>
                 </div>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-envelope"></i> Get In Touch
+                </a>
             </div>
         </div>
     </section>
@@ -1772,11 +1809,21 @@
             document.getElementById('scrollProgress').style.width = scrolled + '%';
         });
 
-        // Resume Dropdown
+        // Toggle Resume Dropdown
         function toggleDropdown() {
             const dropdown = document.getElementById('resumeDropdown');
             dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
         }
+
+        // Close dropdown when clicking outside
+        window.addEventListener('click', function(event) {
+            if (!event.target.matches('.btn') && !event.target.closest('.resume-dropdown')) {
+                const dropdown = document.getElementById('resumeDropdown');
+                if (dropdown && dropdown.style.display === 'block') {
+                    dropdown.style.display = 'none';
+                }
+            }
+        });
     </script>
 </body>
 </html>
