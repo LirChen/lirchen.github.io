@@ -870,16 +870,18 @@
                 Computer Science graduate with DevOps training and 6 years of IDF leadership experience. 
                 Specializing in AWS, Kubernetes, Docker, and full-stack development.
             </p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">
-                    <i class="fas fa-rocket"></i> View Projects
-                </a>
-                <a href="resume/LIR_CHEN_DevOps_CV.pdf" target="_blank" class="btn btn-primary">
-                    <i class="fas fa-file-pdf"></i> View Resume
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <i class="fas fa-envelope"></i> Get In Touch
-                </a>
+            <div class="resume-dropdown" style="position: relative; display: inline-block;">
+                <button class="btn btn-primary" onclick="toggleDropdown()">
+                    <i class="fas fa-file-pdf"></i> View Resume ▼
+                </button>
+                <div id="resumeDropdown" style="display: none; position: absolute; background: rgba(26, 11, 46, 0.98); border: 2px solid var(--primary); border-radius: 10px; margin-top: 5px; z-index: 100;">
+                    <a href="resume/LIR_CHEN_DevOps_CV.pdf" target="_blank" style="display: block; padding: 10px 20px; color: var(--text-light); text-decoration: none;">
+                        <i class="fas fa-server"></i> DevOps Engineer
+                    </a>
+                    <a href="resume/LirChen_SoftwareDevelopment_CV.pdf" target="_blank" style="display: block; padding: 10px 20px; color: var(--text-light); text-decoration: none;">
+                        <i class="fas fa-code"></i> Software Developer
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -1769,6 +1771,12 @@
             const scrolled = (winScroll / height) * 100;
             document.getElementById('scrollProgress').style.width = scrolled + '%';
         });
+
+        // Resume Dropdown
+        function toggleDropdown() {
+            const dropdown = document.getElementById('resumeDropdown');
+            dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+        }
     </script>
 </body>
 </html>
