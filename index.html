@@ -821,6 +821,16 @@
             .modal-body {
                 padding: 1rem;
             }
+
+            .scroll-progress {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 3px;
+                background: var(--gradient-1);
+                z-index: 9999;
+                transition: width 0.1s;
+            }
         }
 
         /* Scroll animations */
@@ -837,6 +847,7 @@
     </style>
 </head>
 <body>
+    <div class="scroll-progress" id="scrollProgress"></div>
     <nav>
         <div class="container">
             <div class="logo">LC</div>
@@ -863,6 +874,9 @@
                 <a href="#projects" class="btn btn-primary">
                     <i class="fas fa-rocket"></i> View Projects
                 </a>
+                <a href="resume/LIR_CHEN_DevOps_CV.pdf" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-file-pdf"></i> View Resume
+                </a>
                 <a href="#contact" class="btn btn-secondary">
                     <i class="fas fa-envelope"></i> Get In Touch
                 </a>
@@ -881,15 +895,15 @@
                     <h3>DevOps Engineer & Full-Stack Developer</h3>
                     <p>
                         I'm a DevOps Engineer & Full-Stack Developer who builds secure, scalable cloud infrastructure and ships reliable software. 
-                        My toolset includes <strong>AWS, Kubernetes, Terraform, Docker</strong>, and automated CI/CD with <strong>GitHub Actions, Jenkins, and ArgoCD</strong>. 
-                        I monitor and harden systems with <strong>Prometheus/Grafana</strong> and follow IaC and security-first practices.
+                        My toolset includes <strong style="color: var(--accent);">AWS, Kubernetes, Terraform, Docker</strong>, and automated CI/CD with <strong style="color: var(--accent);">GitHub Actions, Jenkins, and ArgoCD</strong>. 
+                        I monitor and harden systems with <strong style="color: var(--accent);">Prometheus/Grafana</strong> and follow IaC and security-first practices.
                     </p>
                     <p>
-                        On the product side, I develop with <strong>Node.js, React, Python, and MongoDB</strong>—from backend APIs to dashboards and comprehensive testing. 
+                        On the product side, I develop with <strong style="color: var(--accent);">Node.js, React, Python, and MongoDB</strong>—from backend APIs to dashboards and comprehensive testing. 
                         I combine infrastructure automation with hands-on development to deliver robust, maintainable systems with real user impact.
                     </p>
                     <p>
-                        A <strong>former IDF officer</strong>, I bring leadership, ownership, and calm execution under pressure. 
+                        A <strong style="color: var(--accent);">former IDF officer</strong>, I bring leadership, ownership, and calm execution under pressure. 
                         I'm seeking roles where I can leverage my dual expertise to build systems that are both technically excellent and deliver tangible business value.
                     </p>
                 </div>
@@ -1746,6 +1760,14 @@
                     link.classList.add('active');
                 }
             });
+        });
+
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('scrollProgress').style.width = scrolled + '%';
         });
     </script>
 </body>
