@@ -1094,18 +1094,20 @@
 
                 <div class="project-card fade-in" onclick="openModal('modal3')">
                     <div class="project-image">
-                        <i class="fas fa-server"></i>
+                        <img src="images/home_screen_2.png" alt="FitFlow" style="width:100%; height:100%; object-fit:cover;">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Cost Manager - RESTful API</h3>
+                        <h3 class="project-title">FitFlow - Fitness Tracker</h3>
                         <p class="project-description">
-                            Complete expense management system with RESTful API, MongoDB Atlas integration, automated testing, 
-                            and production deployment with health monitoring.
+                            Comprehensive fitness platform with workout tracking, nutrition monitoring, progress photos, AI coach, 
+                            interactive analytics dashboards, and Docker deployment with 90+ comprehensive tests.
                         </p>
                         <div class="project-tags">
+                            <span class="tag">React</span>
                             <span class="tag">Node.js</span>
-                            <span class="tag">Express</span>
                             <span class="tag">MongoDB</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">Mistral AI</span>
                             <span class="tag">Jest</span>
                         </div>
                     </div>
@@ -1152,20 +1154,18 @@
 
                 <div class="project-card fade-in" onclick="openModal('modal6')">
                     <div class="project-image">
-                        <img src="images/home_screen_2.png" alt="FitFlow" style="width:100%; height:100%; object-fit:cover;">
+                        <i class="fas fa-server"></i>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">FitFlow - Fitness Tracker</h3>
+                        <h3 class="project-title">Cost Manager - RESTful API</h3>
                         <p class="project-description">
-                            Comprehensive fitness platform with workout tracking, nutrition monitoring, progress photos, AI coach, 
-                            interactive analytics dashboards, and Docker deployment with 90+ comprehensive tests.
+                            Complete expense management system with RESTful API, MongoDB Atlas integration, automated testing, 
+                            and production deployment with health monitoring.
                         </p>
                         <div class="project-tags">
-                            <span class="tag">React</span>
                             <span class="tag">Node.js</span>
+                            <span class="tag">Express</span>
                             <span class="tag">MongoDB</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">Mistral AI</span>
                             <span class="tag">Jest</span>
                         </div>
                     </div>
@@ -1334,79 +1334,105 @@
         </div>
     </div>
 
-    <div id="modal3" class="modal">
+        <div id="modal3" class="modal">
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close" onclick="closeModal('modal3')">&times;</span>
-                <h2>Cost Manager - RESTful API</h2>
-                <p class="project-subtitle">Enterprise Expense Management System</p>
+                <h2>FitFlow - Fitness Tracker</h2>
+                <p class="project-subtitle">Comprehensive Fitness & Nutrition Platform</p>
             </div>
             <div class="modal-body">
+                <div class="modal-images">
+                    <div class="modal-image">
+                        <img src="images/home_screen_1.png" alt="FitFlow Home Screen" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                    </div>
+                    <div class="modal-image">
+                        <img src="images/overview_tab.png" alt="Dashboard Overview" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                    </div>
+                    <div class="modal-image">
+                        <img src="images/analytics_tab.png" alt="Analytics Dashboard" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                    </div>
+                </div>
+                
                 <div class="modal-section">
                     <h3>Project Overview</h3>
-                    <p>A comprehensive expense management system with a professional RESTful API backend. Features include CRUD operations, monthly reporting, automated testing, and production deployment with health monitoring.</p>
+                    <p>FitFlow is a full-stack fitness tracking platform that helps users monitor their nutrition, workouts, progress photos, and fitness goals with advanced analytics and an AI-powered coach. Built with modern web technologies and containerized with Docker for seamless deployment.</p>
                 </div>
 
                 <div class="modal-section">
-                <h3>Video Demo</h3>
-                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; margin-top: 1rem; border: 2px solid var(--primary);">
-                    <iframe
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 10px;"
-                    src="https://www.youtube.com/embed/TkiqnvIUnFk"
-                    title="Cost Manager - RESTful API Demo"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                    </iframe>
-                </div>
-                </div>
-
-                <div class="modal-section">
-                    <h3>Key Features</h3>
+                    <h3>Core Features</h3>
                     <ul>
-                        <li><strong>RESTful API:</strong> Complete CRUD operations following REST principles</li>
-                        <li><strong>MongoDB Atlas Integration:</strong> Cloud database with Mongoose ODM and optimized schemas</li>
-                        <li><strong>Computed Pattern:</strong> Cached monthly reports for improved performance</li>
-                        <li><strong>Professional Logging:</strong> Pino logger for structured logging</li>
-                        <li><strong>Comprehensive Testing:</strong> Jest test suite with Supertest for API testing</li>
-                        <li><strong>Production Deployment:</strong> Hosted on Render with health check endpoints</li>
-                        <li><strong>API Documentation:</strong> Complete API documentation with examples</li>
-                        <li><strong>Error Handling:</strong> Robust error handling with meaningful error messages</li>
+                        <li><strong>Dashboard Overview:</strong> Real-time fitness summary with key metrics including weekly workouts, daily calories, current weight & BMI, and active streak</li>
+                        <li><strong>Workout Tracking:</strong> Log exercises with duration, difficulty levels, and comprehensive workout history with date filtering (Today/Week/Month/Year)</li>
+                        <li><strong>Nutrition Tracker:</strong> Track daily meals by type (Breakfast, Lunch, Dinner, Snack) with complete macronutrient breakdown (protein, carbs, fats) and visual charts</li>
+                        <li><strong>Progress Gallery:</strong> Upload and visualize transformation photos over time to track your fitness journey</li>
+                        <li><strong>Goals Management:</strong> Set measurable fitness milestones with visual progress bars and celebrate achievements</li>
+                        <li><strong>Analytics & Stats:</strong> 4 interactive charts showing workout frequency, calorie intake trends, macros breakdown, and duration patterns</li>
+                        <li><strong>BMR/TDEE Calculator:</strong> Calculate daily calorie needs based on personal metrics with calculation history</li>
+                        <li><strong>Nutrition Trivia:</strong> Interactive quiz game to test and improve your nutrition knowledge</li>
+                        <li><strong>AI Fitness Coach:</strong> Get personalized fitness and nutrition advice 24/7 powered by Mistral AI</li>
+                        <li><strong>Profile Management:</strong> Complete user profile with the ability to update personal info, fitness goals, and change password securely</li>
                     </ul>
                 </div>
 
                 <div class="modal-section">
-                    <h3>Technologies Used</h3>
+                    <h3>Screenshots Gallery</h3>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem;">
+                        <img src="images/workout_tab.png" alt="Workout Tracking" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                        <img src="images/nutrition_tab.png" alt="Nutrition Tracking" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                        <img src="images/goals_tab.png" alt="Goals Management" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                        <img src="images/progress_gallery_tab.png" alt="Progress Photos" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                        <img src="images/AI_coach_tab.png" alt="AI Coach" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                        <img src="images/calorie_calculator_tab.png" alt="Calorie Calculator" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                        <img src="images/nutrition_trivia_tab.png" alt="Nutrition Trivia" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                        <img src="images/profile_tab.png" alt="User Profile" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Tech Stack</h3>
                     <ul>
-                        <li>Node.js & Express.js for API development</li>
-                        <li>MongoDB Atlas for cloud database</li>
-                        <li>Mongoose for data modeling</li>
-                        <li>Jest & Supertest for testing</li>
-                        <li>Pino for logging</li>
-                        <li>Render for deployment</li>
+                        <li><strong>Frontend:</strong> React 18 with Vite, Recharts for data visualization, Lucide React icons, Modern CSS3 with glassmorphism design</li>
+                        <li><strong>Backend:</strong> Node.js with Express.js, MongoDB with Mongoose ODM, JWT authentication, Bcrypt password hashing, Mistral AI integration</li>
+                        <li><strong>DevOps:</strong> Docker & Docker Compose, Nginx reverse proxy, Multi-stage builds for optimization</li>
+                        <li><strong>Testing:</strong> Jest & Supertest with 90+ comprehensive tests covering all API endpoints</li>
+                        <li><strong>File Handling:</strong> Multer for progress photo uploads with persistent storage</li>
                     </ul>
                 </div>
 
                 <div class="modal-section">
                     <h3>Technical Achievements</h3>
                     <ul>
-                        <li>Implemented computed pattern for optimized monthly report generation</li>
-                        <li>Created comprehensive test coverage with Jest</li>
-                        <li>Designed RESTful API following industry best practices</li>
-                        <li>Deployed to production with continuous health monitoring</li>
-                        <li>Structured logging for debugging and monitoring</li>
+                        <li><strong>Comprehensive Testing:</strong> 90 tests across 10 test suites covering authentication, CRUD operations, analytics, edge cases, and error handling</li>
+                        <li><strong>RESTful API Architecture:</strong> Well-structured API with 11 dedicated controllers for different features</li>
+                        <li><strong>AI Integration:</strong> Mistral AI-powered coach providing personalized fitness advice with natural language processing</li>
+                        <li><strong>Advanced Analytics:</strong> Real-time data visualization with filtering by Today/Week/Month/Year across all tracking features</li>
+                        <li><strong>Docker Containerization:</strong> Complete Docker Compose setup with health checks, volume persistence, and optimized multi-stage builds</li>
+                        <li><strong>Security:</strong> JWT-based authentication, bcrypt password hashing, secure password requirements (8+ chars, uppercase, lowercase, number, special char)</li>
+                        <li><strong>Responsive Design:</strong> Mobile-first approach ensuring perfect functionality on all device sizes</li>
+                        <li><strong>User Experience:</strong> Intuitive interface with modal-based editing, real-time feedback, and smooth animations</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>API Endpoints</h3>
+                    <p>Complete RESTful API with endpoints for:</p>
+                    <ul>
+                        <li>Authentication (register, login)</li>
+                        <li>User management (profile, stats, password change)</li>
+                        <li>Workouts (CRUD with period filtering)</li>
+                        <li>Nutrition tracking (meals CRUD with date filtering)</li>
+                        <li>Goals management (CRUD with progress tracking)</li>
+                        <li>Analytics (workout stats, nutrition stats, dashboard overview)</li>
+                        <li>Progress photos (upload, retrieve, delete)</li>
+                        <li>Trivia game (questions, answers, statistics)</li>
+                        <li>Calculator (BMR/TDEE calculation with history)</li>
                     </ul>
                 </div>
             </div>
             <div class="modal-footer">
-                <a href="https://github.com/LirChen/Node.js_RESTful_API" target="_blank" class="modal-link">
+                <a href="https://github.com/LirChen/FitFlow" target="_blank" class="modal-link">
                     <i class="fab fa-github"></i> View Code
-                </a>
-                <a href="https://youtu.be/TkiqnvIUnFk" target="_blank" class="modal-link">
-                    <i class="fas fa-play-circle"></i> Watch Demo
-                </a>
-                <a href="https://final-project-server-side-h0n0.onrender.com" target="_blank" class="modal-link">
-                    <i class="fas fa-globe"></i> Live API
                 </a>
             </div>
         </div>
@@ -1537,105 +1563,79 @@
         </div>
     </div>
 
-    <div id="modal6" class="modal">
+        <div id="modal6" class="modal">
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close" onclick="closeModal('modal6')">&times;</span>
-                <h2>FitFlow - Fitness Tracker</h2>
-                <p class="project-subtitle">Comprehensive Fitness & Nutrition Platform</p>
+                <h2>Cost Manager - RESTful API</h2>
+                <p class="project-subtitle">Enterprise Expense Management System</p>
             </div>
             <div class="modal-body">
-                <div class="modal-images">
-                    <div class="modal-image">
-                        <img src="images/home_screen_1.png" alt="FitFlow Home Screen" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
-                    </div>
-                    <div class="modal-image">
-                        <img src="images/overview_tab.png" alt="Dashboard Overview" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
-                    </div>
-                    <div class="modal-image">
-                        <img src="images/analytics_tab.png" alt="Analytics Dashboard" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
-                    </div>
-                </div>
-                
                 <div class="modal-section">
                     <h3>Project Overview</h3>
-                    <p>FitFlow is a full-stack fitness tracking platform that helps users monitor their nutrition, workouts, progress photos, and fitness goals with advanced analytics and an AI-powered coach. Built with modern web technologies and containerized with Docker for seamless deployment.</p>
+                    <p>A comprehensive expense management system with a professional RESTful API backend. Features include CRUD operations, monthly reporting, automated testing, and production deployment with health monitoring.</p>
                 </div>
 
                 <div class="modal-section">
-                    <h3>Core Features</h3>
+                <h3>Video Demo</h3>
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; margin-top: 1rem; border: 2px solid var(--primary);">
+                    <iframe
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 10px;"
+                    src="https://www.youtube.com/embed/TkiqnvIUnFk"
+                    title="Cost Manager - RESTful API Demo"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                    </iframe>
+                </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>Key Features</h3>
                     <ul>
-                        <li><strong>Dashboard Overview:</strong> Real-time fitness summary with key metrics including weekly workouts, daily calories, current weight & BMI, and active streak</li>
-                        <li><strong>Workout Tracking:</strong> Log exercises with duration, difficulty levels, and comprehensive workout history with date filtering (Today/Week/Month/Year)</li>
-                        <li><strong>Nutrition Tracker:</strong> Track daily meals by type (Breakfast, Lunch, Dinner, Snack) with complete macronutrient breakdown (protein, carbs, fats) and visual charts</li>
-                        <li><strong>Progress Gallery:</strong> Upload and visualize transformation photos over time to track your fitness journey</li>
-                        <li><strong>Goals Management:</strong> Set measurable fitness milestones with visual progress bars and celebrate achievements</li>
-                        <li><strong>Analytics & Stats:</strong> 4 interactive charts showing workout frequency, calorie intake trends, macros breakdown, and duration patterns</li>
-                        <li><strong>BMR/TDEE Calculator:</strong> Calculate daily calorie needs based on personal metrics with calculation history</li>
-                        <li><strong>Nutrition Trivia:</strong> Interactive quiz game to test and improve your nutrition knowledge</li>
-                        <li><strong>AI Fitness Coach:</strong> Get personalized fitness and nutrition advice 24/7 powered by Mistral AI</li>
-                        <li><strong>Profile Management:</strong> Complete user profile with the ability to update personal info, fitness goals, and change password securely</li>
+                        <li><strong>RESTful API:</strong> Complete CRUD operations following REST principles</li>
+                        <li><strong>MongoDB Atlas Integration:</strong> Cloud database with Mongoose ODM and optimized schemas</li>
+                        <li><strong>Computed Pattern:</strong> Cached monthly reports for improved performance</li>
+                        <li><strong>Professional Logging:</strong> Pino logger for structured logging</li>
+                        <li><strong>Comprehensive Testing:</strong> Jest test suite with Supertest for API testing</li>
+                        <li><strong>Production Deployment:</strong> Hosted on Render with health check endpoints</li>
+                        <li><strong>API Documentation:</strong> Complete API documentation with examples</li>
+                        <li><strong>Error Handling:</strong> Robust error handling with meaningful error messages</li>
                     </ul>
                 </div>
 
                 <div class="modal-section">
-                    <h3>Screenshots Gallery</h3>
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem;">
-                        <img src="images/workout_tab.png" alt="Workout Tracking" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
-                        <img src="images/nutrition_tab.png" alt="Nutrition Tracking" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
-                        <img src="images/goals_tab.png" alt="Goals Management" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
-                        <img src="images/progress_gallery_tab.png" alt="Progress Photos" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
-                        <img src="images/AI_coach_tab.png" alt="AI Coach" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
-                        <img src="images/calorie_calculator_tab.png" alt="Calorie Calculator" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
-                        <img src="images/nutrition_trivia_tab.png" alt="Nutrition Trivia" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
-                        <img src="images/profile_tab.png" alt="User Profile" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
-                    </div>
-                </div>
-
-                <div class="modal-section">
-                    <h3>Tech Stack</h3>
+                    <h3>Technologies Used</h3>
                     <ul>
-                        <li><strong>Frontend:</strong> React 18 with Vite, Recharts for data visualization, Lucide React icons, Modern CSS3 with glassmorphism design</li>
-                        <li><strong>Backend:</strong> Node.js with Express.js, MongoDB with Mongoose ODM, JWT authentication, Bcrypt password hashing, Mistral AI integration</li>
-                        <li><strong>DevOps:</strong> Docker & Docker Compose, Nginx reverse proxy, Multi-stage builds for optimization</li>
-                        <li><strong>Testing:</strong> Jest & Supertest with 90+ comprehensive tests covering all API endpoints</li>
-                        <li><strong>File Handling:</strong> Multer for progress photo uploads with persistent storage</li>
+                        <li>Node.js & Express.js for API development</li>
+                        <li>MongoDB Atlas for cloud database</li>
+                        <li>Mongoose for data modeling</li>
+                        <li>Jest & Supertest for testing</li>
+                        <li>Pino for logging</li>
+                        <li>Render for deployment</li>
                     </ul>
                 </div>
 
                 <div class="modal-section">
                     <h3>Technical Achievements</h3>
                     <ul>
-                        <li><strong>Comprehensive Testing:</strong> 90 tests across 10 test suites covering authentication, CRUD operations, analytics, edge cases, and error handling</li>
-                        <li><strong>RESTful API Architecture:</strong> Well-structured API with 11 dedicated controllers for different features</li>
-                        <li><strong>AI Integration:</strong> Mistral AI-powered coach providing personalized fitness advice with natural language processing</li>
-                        <li><strong>Advanced Analytics:</strong> Real-time data visualization with filtering by Today/Week/Month/Year across all tracking features</li>
-                        <li><strong>Docker Containerization:</strong> Complete Docker Compose setup with health checks, volume persistence, and optimized multi-stage builds</li>
-                        <li><strong>Security:</strong> JWT-based authentication, bcrypt password hashing, secure password requirements (8+ chars, uppercase, lowercase, number, special char)</li>
-                        <li><strong>Responsive Design:</strong> Mobile-first approach ensuring perfect functionality on all device sizes</li>
-                        <li><strong>User Experience:</strong> Intuitive interface with modal-based editing, real-time feedback, and smooth animations</li>
-                    </ul>
-                </div>
-
-                <div class="modal-section">
-                    <h3>API Endpoints</h3>
-                    <p>Complete RESTful API with endpoints for:</p>
-                    <ul>
-                        <li>Authentication (register, login)</li>
-                        <li>User management (profile, stats, password change)</li>
-                        <li>Workouts (CRUD with period filtering)</li>
-                        <li>Nutrition tracking (meals CRUD with date filtering)</li>
-                        <li>Goals management (CRUD with progress tracking)</li>
-                        <li>Analytics (workout stats, nutrition stats, dashboard overview)</li>
-                        <li>Progress photos (upload, retrieve, delete)</li>
-                        <li>Trivia game (questions, answers, statistics)</li>
-                        <li>Calculator (BMR/TDEE calculation with history)</li>
+                        <li>Implemented computed pattern for optimized monthly report generation</li>
+                        <li>Created comprehensive test coverage with Jest</li>
+                        <li>Designed RESTful API following industry best practices</li>
+                        <li>Deployed to production with continuous health monitoring</li>
+                        <li>Structured logging for debugging and monitoring</li>
                     </ul>
                 </div>
             </div>
             <div class="modal-footer">
-                <a href="https://github.com/LirChen" target="_blank" class="modal-link">
+                <a href="https://github.com/LirChen/Node.js_RESTful_API" target="_blank" class="modal-link">
                     <i class="fab fa-github"></i> View Code
+                </a>
+                <a href="https://youtu.be/TkiqnvIUnFk" target="_blank" class="modal-link">
+                    <i class="fas fa-play-circle"></i> Watch Demo
+                </a>
+                <a href="https://final-project-server-side-h0n0.onrender.com" target="_blank" class="modal-link">
+                    <i class="fas fa-globe"></i> Live API
                 </a>
             </div>
         </div>
