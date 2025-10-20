@@ -258,9 +258,9 @@
 
         .about-content {
             display: grid;
-            grid-template-columns: 300px 1fr;
+            grid-template-columns: 350px 1fr;
             gap: 3rem;
-            align-items: center;
+            align-items: flex-start;
         }
 
         .about-image-container {
@@ -270,7 +270,7 @@
         .profile-photo {
             width: 100%;
             max-width: 300px;
-            height: 400px;
+            height: 450px;
             object-fit: cover;
             border-radius: 20px;
             border: 3px solid var(--primary);
@@ -798,7 +798,10 @@
             }
 
             .stats {
-                grid-template-columns: repeat(2, 1fr);
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 2rem;
+                margin-top: 6rem;
             }
 
             .projects-grid {
@@ -855,6 +858,7 @@
         .resume-dropdown {
             position: relative;
             display: inline-block;
+            margin-bottom: 3rem;
         }
 
         .resume-dropdown .btn {
