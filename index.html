@@ -270,6 +270,8 @@
         .profile-photo {
             width: 100%;
             max-width: 300px;
+            height: 400px;
+            object-fit: cover;
             border-radius: 20px;
             border: 3px solid var(--primary);
             box-shadow: 0 10px 40px rgba(192, 132, 252, 0.4);
@@ -928,19 +930,6 @@
                 <a href="#projects" class="btn btn-primary">
                     <i class="fas fa-rocket"></i> View Projects
                 </a>
-                <div class="resume-dropdown">
-                    <button class="btn btn-primary" onclick="toggleDropdown()">
-                        <i class="fas fa-file-pdf"></i> View Resume ▼
-                    </button>
-                    <div id="resumeDropdown">
-                        <a href="resume/LIR_CHEN_DevOps_CV.pdf" target="_blank">
-                            <i class="fas fa-server"></i> DevOps Engineer
-                        </a>
-                        <a href="resume/LirChen_SoftwareDevelopment_CV.pdf" target="_blank">
-                            <i class="fas fa-code"></i> Software Developer
-                        </a>
-                    </div>
-                </div>
                 <a href="#contact" class="btn btn-secondary">
                     <i class="fas fa-envelope"></i> Get In Touch
                 </a>
@@ -970,6 +959,19 @@
                         A <strong style="color: var(--accent);">former IDF officer</strong>, I bring leadership, ownership, and calm execution under pressure. 
                         I'm seeking roles where I can leverage my dual expertise to build systems that are both technically excellent and deliver tangible business value.
                     </p>
+                    <div class="resume-dropdown">
+                        <button class="btn btn-primary" onclick="toggleDropdown()">
+                            <i class="fas fa-file-pdf"></i> View Resume ▼
+                        </button>
+                        <div id="resumeDropdown">
+                            <a href="resume/LIR_CHEN_DevOps_CV.pdf" target="_blank">
+                                <i class="fas fa-server"></i> DevOps Engineer
+                            </a>
+                            <a href="resume/LirChen_SoftwareDevelopment_CV.pdf" target="_blank">
+                                <i class="fas fa-code"></i> Software Developer
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="stats fade-in">
@@ -1835,18 +1837,25 @@
         });
 
         // Toggle Resume Dropdown
-        function toggleDropdown() {
+        function toggleDropdown(event) {
+            if (event) {
+                event.stopPropagation();
+            }
             const dropdown = document.getElementById('resumeDropdown');
-            dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            } else {
+                dropdown.style.display = 'block';
+            }
         }
 
         // Close dropdown when clicking outside
-        window.addEventListener('click', function(event) {
-            if (!event.target.matches('.btn') && !event.target.closest('.resume-dropdown')) {
-                const dropdown = document.getElementById('resumeDropdown');
-                if (dropdown && dropdown.style.display === 'block') {
-                    dropdown.style.display = 'none';
-                }
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('resumeDropdown');
+            const resumeButton = event.target.closest('.resume-dropdown');
+            
+            if (!resumeButton && dropdown && dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
             }
         });
     </script>
