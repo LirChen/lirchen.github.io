@@ -1271,21 +1271,21 @@
             <div class="modal-header">
                 <span class="close" onclick="closeModal('modal2')">&times;</span>
                 <h2>FlavorWorld - Recipe Social Network</h2>
-                <p class="project-subtitle">Modern Social Platform for Recipe Sharing</p>
+                <p class="project-subtitle">Cross-Platform Social Platform for Recipe Sharing</p>
             </div>
             <div class="modal-body">
                 <div class="modal-section">
                     <h3>Project Overview</h3>
-                    <p>FlavorWorld is a full-stack social networking application built for recipe enthusiasts. Features include real-time messaging, group functionality, social interactions, and a comprehensive recipe management system. Built with React Native for mobile and React for web platforms.</p>
+                    <p>FlavorWorld is a comprehensive cross-platform social networking application built for recipe enthusiasts. Available on both <strong style="color: var(--accent);">mobile (React Native)</strong> and <strong style="color: var(--accent);">web (React)</strong> platforms. Features include real-time messaging, advanced group management, social interactions, and a comprehensive recipe system with video support.</p>
                 </div>
 
                 <div class="modal-section">
-                    <h3>Video Demo</h3>
+                    <h3>📱 Mobile App Demo</h3>
                     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; margin-top: 1rem; border: 2px solid var(--primary);">
                         <iframe 
                             style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 10px;" 
                             src="https://www.youtube.com/embed/oW3b5Dxeja0" 
-                            title="FlavorWorld Demo" 
+                            title="FlavorWorld Mobile Demo" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                             allowfullscreen>
@@ -1294,56 +1294,87 @@
                 </div>
 
                 <div class="modal-section">
-                    <h3>Key Features</h3>
+                    <h3>🖥️ Web Application Screenshots</h3>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem;">
+                        <img src="images/FlavorWorldWebsite-home.png" alt="Home Feed" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                        <img src="images/FlavorWorldWebsite-recipe.png" alt="Recipe Details" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                        <img src="images/FlavorWorldWebsite-profile.png" alt="User Profile" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                        <img src="images/FlavorWorldWebsite-chat.png" alt="Real-time Chat" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                        <img src="images/FlavorWorldWebsite-notifications.png" alt="Notifications Center" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                        <img src="images/FlavorWorldWebsite-login.png" alt="Login Interface" style="width:100%; border-radius:8px; border:1px solid var(--primary);">
+                    </div>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🆕 What's New in Web Version</h3>
                     <ul>
-                        <li><strong>React Native Mobile App:</strong> Cross-platform mobile application with native performance</li>
+                        <li><strong>Enhanced Desktop Experience:</strong> Glass-morphism design with optimized layouts for large screens</li>
+                        <li><strong>Video Upload Support:</strong> Share cooking videos up to 60 seconds alongside images</li>
+                        <li><strong>Advanced Admin Dashboard:</strong> Complete group management with role promotion/demotion and member controls</li>
+                        <li><strong>Recipe Sharing in Chats:</strong> Share recipes directly in conversations with rich previews</li>
+                        <li><strong>Comprehensive Notification Center:</strong> Centralized hub for all activity alerts with real-time updates</li>
+                        <li><strong>Optimistic UI Updates:</strong> Instant feedback on likes and interactions without server wait</li>
+                        <li><strong>Professional Security:</strong> Cascade deletion, XSS protection, MongoDB injection prevention</li>
+                    </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🔥 Core Features (Both Platforms)</h3>
+                    <ul>
+                        <li><strong>Cross-Platform Development:</strong> React Native for mobile + React with Vite for web</li>
                         <li><strong>Microservices Backend:</strong> API Gateway with specialized services (Auth, User, Recipe, Group, Chat)</li>
-                        <li><strong>Real-time Communication:</strong> Socket.IO integration for instant messaging and typing indicators</li>
-                        <li><strong>Social Features:</strong> Follow system, groups, likes, comments, and push notifications</li>
-                        <li><strong>Recipe Management:</strong> Create, share, and discover recipes with photo uploads</li>
-                        <li><strong>Group Chat:</strong> Create cooking groups with real-time messaging</li>
-                        <li><strong>User Authentication:</strong> Secure JWT-based authentication with email verification</li>
-                        <li><strong>File Upload:</strong> Multi-image upload for recipe photos</li>
+                        <li><strong>Real-time Communication:</strong> Socket.IO for instant messaging, typing indicators, and read receipts</li>
+                        <li><strong>Advanced Social Features:</strong> Follow system, groups, likes, comments, personalized feed algorithm</li>
+                        <li><strong>Recipe Management:</strong> Create, edit, delete recipes with images/videos, 16 cuisines, 10 dietary tags</li>
+                        <li><strong>Group Communities:</strong> Create public/private cooking groups with admin controls and post approval workflows</li>
+                        <li><strong>Smart Notifications:</strong> Real-time push notifications for likes, comments, follows, group activities</li>
+                        <li><strong>Search & Discovery:</strong> Find users, recipes, groups with AI-powered suggested content</li>
                     </ul>
                 </div>
 
                 <div class="modal-section">
                     <h3>Technologies Used</h3>
                     <ul>
-                        <li>React Native & Expo for mobile development</li>
-                        <li>React for web interface</li>
-                        <li>Node.js & Express for backend APIs</li>
-                        <li>Socket.IO for real-time features</li>
-                        <li>MongoDB for database with optimized schemas</li>
-                        <li>JWT for authentication</li>
-                        <li>Multer for file uploads</li>
-                        <li>Push notifications integration</li>
+                        <li><strong>Mobile:</strong> React Native & Expo for cross-platform development</li>
+                        <li><strong>Web:</strong> React 18 + Vite for modern web experience</li>
+                        <li><strong>Backend:</strong> Node.js & Express with microservices architecture</li>
+                        <li><strong>Real-time:</strong> Socket.IO for live features</li>
+                        <li><strong>Database:</strong> MongoDB with optimized schemas for social interactions</li>
+                        <li><strong>Authentication:</strong> JWT with bcrypt password hashing</li>
+                        <li><strong>File Upload:</strong> Multer for images and videos with base64 encoding</li>
+                        <li><strong>Styling:</strong> Modern CSS with glass-morphism effects and custom properties</li>
                     </ul>
                 </div>
 
                 <div class="modal-section">
                     <h3>Technical Achievements</h3>
                     <ul>
+                        <li>Built cross-platform solution serving both mobile and web users</li>
                         <li>Implemented microservices architecture with API gateway pattern</li>
-                        <li>Built real-time chat with Socket.IO including typing indicators and online status</li>
-                        <li>Designed scalable MongoDB schemas for social networking features</li>
-                        <li>Created responsive UI components for both mobile and web platforms</li>
-                        <li>Integrated push notifications for user engagement</li>
+                        <li>Designed real-time chat with Socket.IO including typing indicators and online status</li>
+                        <li>Created scalable MongoDB schemas for complex social networking features</li>
+                        <li>Developed responsive UI components with glass-morphism design system</li>
+                        <li>Integrated comprehensive notification system with real-time updates</li>
+                        <li>Implemented advanced group management with three-tier permission system</li>
+                        <li>Built recipe sharing feature with rich previews in chat conversations</li>
                     </ul>
                 </div>
             </div>
             <div class="modal-footer">
+                <a href="https://github.com/LirChen/FlavorWorldWebsite" target="_blank" class="modal-link">
+                    <i class="fab fa-github"></i> Web Version
+                </a>
                 <a href="https://github.com/LirChen/Flavor_World_Final_Project" target="_blank" class="modal-link">
-                    <i class="fab fa-github"></i> View Code
+                    <i class="fab fa-github"></i> Mobile Version
                 </a>
                 <a href="https://lnkd.in/p/gd4WFsUQ" target="_blank" class="modal-link">
-                    <i class="fas fa-play-circle"></i> Watch Post
+                    <i class="fas fa-play-circle"></i> Watch Demo
                 </a>
             </div>
         </div>
     </div>
 
-        <div id="modal3" class="modal">
+    <div id="modal3" class="modal">
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close" onclick="closeModal('modal3')">&times;</span>
