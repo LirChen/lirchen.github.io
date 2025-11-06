@@ -1870,20 +1870,20 @@
 
                 <div class="project-card fade-in" onclick="openModal('modal4')">
                     <div class="project-image">
-                        <img src="images/auth-login.png" alt="Authentication System" style="width:100%; height:100%; object-fit:cover;">
+                        <img src="images/auth-dashboard.png" alt="Authentication System" style="width:100%; height:100%; object-fit:cover;">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Full-Stack Auth with Event Streaming</h3>
+                        <h3 class="project-title">Fullstack Authentication App</h3>
                         <p class="project-description">
-                            Enterprise authentication system with microservices architecture, TiDB distributed database, 
-                            Kafka event streaming, and Docker containerization.
+                            Production-ready authentication system with JWT, refresh tokens, real-time change data capture (TiCDC), 
+                            Kafka event streaming, and comprehensive Swagger documentation.
                         </p>
                         <div class="project-tags">
                             <span class="tag">React</span>
                             <span class="tag">Node.js</span>
                             <span class="tag">TiDB</span>
                             <span class="tag">Kafka</span>
-                            <span class="tag">Docker</span>
+                            <span class="tag">Swagger</span>
                         </div>
                     </div>
                 </div>
@@ -2228,58 +2228,93 @@
         <div class="modal-content">
             <div class="modal-header">
                 <span class="close" onclick="closeModal('modal4')">&times;</span>
-                <h2>Full-Stack Auth with Event Streaming</h2>
-                <p class="project-subtitle">Enterprise Authentication with Kafka Integration</p>
+                <h2>Fullstack Authentication App</h2>
+                <p class="project-subtitle">Production-Ready Authentication with Event Streaming</p>
             </div>
             <div class="modal-body">
                 <div class="modal-section">
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 2rem;">
-                        <img src="images/auth-dashboard.png" alt="Auth Dashboard" style="width:100%; border-radius:10px; border:2px solid var(--primary);">
+                    <h3>Application Screenshots</h3>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem;">
+                        <img src="images/auth-dashboard-2.png" alt="Main Dashboard" style="width:100%; border-radius:10px; border:2px solid var(--primary);">
                         <img src="images/auth-login.png" alt="Login Interface" style="width:100%; border-radius:10px; border:2px solid var(--primary);">
+                        <img src="images/auth-dashboard.png" alt="User Management" style="width:100%; border-radius:10px; border:2px solid var(--primary);">
                     </div>
                 </div>
                 
                 <div class="modal-section">
                     <h3>Project Overview</h3>
-                    <p>An enterprise-grade authentication system demonstrating microservices architecture with event-driven design. Features distributed database with change data capture and real-time activity logging through Kafka.</p>
+                    <p>A production-ready authentication system with React frontend, Node.js backend, and event-driven architecture. Features JWT authentication with refresh tokens, distributed TiDB database, real-time change data capture (TiCDC), Kafka event streaming, and comprehensive Swagger API documentation. Fully containerized with Docker Compose for one-command deployment.</p>
+                </div>
+
+                <div class="modal-section">
+                    <h3>🎯 Try the Demo</h3>
+                    <div style="background: rgba(192, 132, 252, 0.1); padding: 1rem; border-radius: 10px; border: 2px solid var(--primary);">
+                        <p style="margin-bottom: 0.5rem; font-weight: 600;">Demo Credentials:</p>
+                        <p style="margin: 0.3rem 0;"><strong>Regular User:</strong> demo@example.com / Demo123!</p>
+                        <p style="margin: 0.3rem 0;"><strong>Admin User:</strong> admin@example.com / Admin123!</p>
+                    </div>
                 </div>
 
                 <div class="modal-section">
                     <h3>Key Features</h3>
                     <ul>
-                        <li><strong>Microservices Architecture:</strong> React frontend, Node.js API, and Kafka consumer services</li>
-                        <li><strong>Distributed Database:</strong> TiDB for scalable, MySQL-compatible distributed SQL</li>
-                        <li><strong>Change Data Capture:</strong> TiCDC for real-time database change streaming</li>
-                        <li><strong>Event-Driven Processing:</strong> Kafka for asynchronous activity logging and processing</li>
-                        <li><strong>Containerized Deployment:</strong> Complete Docker Compose orchestration</li>
-                        <li><strong>Advanced Monitoring:</strong> Custom logging and database change tracking</li>
-                        <li><strong>User Management Dashboard:</strong> Real-time profile information and system analytics</li>
-                        <li><strong>Secure Authentication:</strong> JWT-based auth with modern login interface</li>
+                        <li><strong>JWT Authentication:</strong> Access tokens with refresh token mechanism for secure sessions</li>
+                        <li><strong>Password Security:</strong> bcrypt hashing with 12 rounds and strong password requirements</li>
+                        <li><strong>Rate Limiting:</strong> Protection on authentication endpoints (10 requests/min)</li>
+                        <li><strong>TiDB Database:</strong> Distributed SQL database with TiKV and PD components</li>
+                        <li><strong>Change Data Capture:</strong> TiCDC streaming database changes to Kafka in real-time</li>
+                        <li><strong>Event Streaming:</strong> Kafka consumer processing user activities and database changes</li>
+                        <li><strong>API Documentation:</strong> Interactive Swagger/OpenAPI docs at /api-docs endpoint</li>
+                        <li><strong>Docker Deployment:</strong> Complete orchestration with docker-compose (one-command startup)</li>
+                        <li><strong>Professional Logging:</strong> Structured logging with log4js for debugging and monitoring</li>
+                        <li><strong>Security:</strong> CORS protection, input validation, SQL injection prevention</li>
                     </ul>
                 </div>
 
                 <div class="modal-section">
-                    <h3>Technologies Used</h3>
+                    <h3>Tech Stack</h3>
                     <ul>
-                        <li>React for frontend dashboard</li>
-                        <li>Node.js & Express for API services</li>
-                        <li>TiDB distributed SQL database</li>
-                        <li>TiCDC for change data capture</li>
-                        <li>Apache Kafka for event streaming</li>
-                        <li>Docker & Docker Compose for containerization</li>
-                        <li>log4js for structured logging</li>
+                        <li><strong>Frontend:</strong> React with React Router and Context API for state management</li>
+                        <li><strong>Backend:</strong> Node.js, Express, JWT authentication, bcrypt password hashing</li>
+                        <li><strong>Database:</strong> TiDB (distributed SQL), TiKV (storage engine), PD (placement driver)</li>
+                        <li><strong>CDC & Messaging:</strong> TiCDC for change data capture, Kafka with Zookeeper for event streaming</li>
+                        <li><strong>API Documentation:</strong> Swagger/OpenAPI for interactive API documentation</li>
+                        <li><strong>DevOps:</strong> Docker & Docker Compose with multi-service orchestration</li>
+                        <li><strong>Logging:</strong> log4js for structured application logs</li>
+                        <li><strong>Security:</strong> CORS, rate limiting, input validation, SQL injection protection</li>
                     </ul>
                 </div>
 
                 <div class="modal-section">
                     <h3>Technical Achievements</h3>
                     <ul>
-                        <li>Implemented microservices architecture with event-driven design</li>
-                        <li>Integrated TiDB with TiCDC for real-time change data capture</li>
-                        <li>Built Kafka consumer for processing authentication events</li>
-                        <li>Created Docker Compose setup for complete local development environment</li>
-                        <li>Designed user management dashboard with real-time analytics</li>
+                        <li><strong>Event-Driven Architecture:</strong> Built microservices with Kafka for asynchronous event processing</li>
+                        <li><strong>Database Streaming:</strong> Integrated TiCDC to capture and stream all database changes to Kafka topics</li>
+                        <li><strong>One-Command Deployment:</strong> Complete Docker Compose setup initializing 8+ services automatically</li>
+                        <li><strong>API Documentation:</strong> Comprehensive Swagger documentation with interactive testing interface</li>
+                        <li><strong>Token Management:</strong> Implemented refresh token rotation for secure long-lived sessions</li>
+                        <li><strong>Rate Limiting:</strong> Protected authentication endpoints with intelligent rate limiting (100 req/15min general, 10 req/min auth)</li>
+                        <li><strong>Error Handling:</strong> Comprehensive error handling with meaningful error messages and proper HTTP status codes</li>
+                        <li><strong>Production Ready:</strong> Complete with health checks, logging, monitoring, and security best practices</li>
                     </ul>
+                </div>
+
+                <div class="modal-section">
+                    <h3>API Endpoints</h3>
+                    <ul>
+                        <li><strong>POST /api/auth/register:</strong> Create new user account with validation</li>
+                        <li><strong>POST /api/auth/login:</strong> Authenticate and receive access + refresh tokens</li>
+                        <li><strong>POST /api/auth/refresh:</strong> Get new access token using refresh token</li>
+                        <li><strong>POST /api/auth/logout:</strong> Invalidate current session</li>
+                        <li><strong>GET /api/auth/validate:</strong> Verify token validity</li>
+                        <li><strong>GET /api/users:</strong> List all users (protected route)</li>
+                        <li><strong>GET /api/users/:id:</strong> Get specific user details (protected route)</li>
+                        <li><strong>GET /health:</strong> Application health check endpoint</li>
+                        <li><strong>GET /api-docs:</strong> Interactive Swagger API documentation</li>
+                    </ul>
+                    <p style="margin-top: 1rem; color: var(--accent); font-weight: 600;">
+                        📚 Full interactive documentation available at /api-docs endpoint
+                    </p>
                 </div>
             </div>
             <div class="modal-footer">
