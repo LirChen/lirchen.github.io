@@ -21,6 +21,22 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Lir Chen",
+        "jobTitle": "DevOps Engineer & Software Developer",
+        "url": "https://lirchen.github.io",
+        "sameAs": [
+            "https://linkedin.com/in/lir-chen",
+            "https://github.com/LirChen"
+        ],
+        "alumniOf": "Holon Institute of Technology",
+        "knowsAbout": ["DevOps", "AWS", "Kubernetes", "React", "Node.js", "Docker", "Terraform", "Python", "MongoDB"]
+        }
+    </script>
     <style>
         * {
             margin: 0;
@@ -554,6 +570,21 @@
             overflow: hidden;
         }
 
+        .project-image::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
         .project-image::after {
             content: 'Click for details';
             position: absolute;
@@ -1035,8 +1066,13 @@
                 background: rgba(192, 132, 252, 0.2);
             }
 
+            .hero .description {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
 
             .hero .subtitle {
@@ -1356,6 +1392,16 @@
             50% { opacity: 0.5; }
         }
 
+        @media (max-width: 768px) {
+            .mobile-hint {
+                display: block !important;
+                text-align: center;
+                color: var(--accent);
+                margin-bottom: 1rem;
+                font-weight: 600;
+            }
+        }
+
         /* Education Section */
         .education {
             background: #1f0e3d;
@@ -1459,6 +1505,59 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .floating-contact-btn {
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(192, 132, 252, 0.5);
+            z-index: 999;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .floating-contact-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(192, 132, 252, 0.7);
+        }
+
+        .floating-contact-btn i {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .github-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 8px 16px;
+            border-radius: 50px;
+            background: rgba(192, 132, 252, 0.1);
+            border: 2px solid var(--primary);
+        }
+
+        .github-link:hover {
+            background: rgba(192, 132, 252, 0.2);
+            transform: translateY(-2px);
+            color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .github-link {
+                display: none; 
+            }
+        }
     </style>
 </head>
 <body>
@@ -1475,6 +1574,9 @@
     <nav>
         <div class="container">
             <div class="logo">LC</div>
+                <a href="https://github.com/LirChen" target="_blank" class="github-link" style="margin-left: auto; margin-right: 2rem;">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
                 <button class="mobile-menu-toggle" aria-label="Toggle menu">
                     <span></span>
                     <span></span>
@@ -1518,7 +1620,10 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content fade-in">
                 <div class="about-image-container">
-                    <img src="images/profile-photo.jpg" alt="Lir Chen" class="profile-photo">
+                    <img src="images/profile-photo.jpg" 
+                        alt="Lir Chen" 
+                        class="profile-photo"
+                        loading="lazy">                
                 </div>
                 <div class="about-text">
                     <h3>DevOps Engineer & Full-Stack Developer</h3>
@@ -1535,6 +1640,19 @@
                         A <strong style="color: var(--accent);">former IDF officer</strong>, I bring leadership, ownership, and calm execution under pressure. 
                         I'm seeking roles where I can leverage my dual expertise to build systems that are both technically excellent and deliver tangible business value.
                     </p>
+                    <p style="border-left: 4px solid var(--accent); padding-left: 1rem; margin-top: 1.5rem; background: rgba(192, 132, 252, 0.1); padding: 1rem 1rem 1rem 1.5rem; border-radius: 8px;">
+                        <strong style="color: var(--accent);">What I'm Looking For:</strong><br>
+                        DevOps or Full-Stack positions where I can leverage both infrastructure automation and software development. 
+                        I thrive in environments that value learning, innovation, and delivering real business impact.
+                    </p>
+                    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(232, 121, 249, 0.1); border-radius: 10px; border: 2px solid var(--pink);">
+                        <h4 style="color: var(--pink); margin-bottom: 0.5rem; font-size: 1rem;">
+                            🚀 Currently Exploring
+                        </h4>
+                        <p style="margin: 0; color: var(--purple-light); font-size: 0.95rem;">
+                            Advanced Kubernetes patterns, GitOps best practices, and expanding my security expertise with DevSecOps tools.
+                        </p>
+                    </div>
                     <div class="resume-dropdown">
                         <button class="btn btn-primary" onclick="toggleDropdown()">
                             <i class="fas fa-file-pdf"></i> View Resume ▼
@@ -1553,19 +1671,19 @@
             <div class="stats fade-in">
                 <div class="stat-box">
                     <div class="number">B.Sc.</div>
-                    <div class="label">Computer Science (GPA: 86)<br>Holon Institute of Technology<br></div>
+                    <div class="label">Computer Science<br>GPA: 86</div>
                 </div>
                 <div class="stat-box">
-                    <div class="number">1000</div>
+                    <div class="number">1000+</div>
                     <div class="label">DevOps Training Hours</div>
                 </div>
                 <div class="stat-box">
                     <div class="number">6+</div>
-                    <div class="label">Years of Leadership</div>
+                    <div class="label">Years IDF Leadership</div>
                 </div>
                 <div class="stat-box">
-                    <div class="number">10+</div>
-                    <div class="label">Major Projects</div>
+                    <div class="number">20+</div>
+                    <div class="label">Technologies Mastered</div>
                 </div>
             </div>
         </div>
@@ -1806,6 +1924,9 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">Featured Projects</h2>
+            <p style="display: none;" class="mobile-hint">
+                👆 Tap any project for full details
+            </p>
             <div class="projects-grid">
                 <div class="project-card fade-in" onclick="openModal('modal1')">
                     <div class="project-image">
@@ -1829,13 +1950,16 @@
 
                 <div class="project-card fade-in" onclick="openModal('modal2')">
                     <div class="project-image">
-                        <img src="images/FlavorWorldWebsite-home.png" alt="FlavorWorld - Recipe Social Network" style="width:100%; height:100%; object-fit:cover;">
+                        <img src="images/FlavorWorldWebsite-home.png" 
+                            alt="FlavorWorld homepage showing recipe feed with social features including likes, comments, and user profiles" 
+                            style="width:100%; height:100%; object-fit:cover;">                    
                     </div>
                     <div class="project-content">
                         <h3 class="project-title">FlavorWorld - Recipe Social Network</h3>
                         <p class="project-description">
-                            Cross-platform social network (Mobile + Web) with microservices architecture, real-time chat using Socket.IO, 
-                            and comprehensive social features including groups, follows, and notifications.
+                            Cross-platform social network (Mobile + Web) serving <strong style="color: var(--accent);">2 platforms</strong> 
+                            with <strong style="color: var(--accent);">real-time chat</strong>, groups, and 
+                            <strong style="color: var(--accent);">15+ core features</strong>.
                         </p>
                         <div class="project-tags">
                             <span class="tag">React Native</span>
@@ -1854,8 +1978,9 @@
                     <div class="project-content">
                         <h3 class="project-title">FitFlow - Fitness Tracker</h3>
                         <p class="project-description">
-                            Comprehensive fitness platform with workout tracking, nutrition monitoring, progress photos, AI coach, 
-                            interactive analytics dashboards, and Docker deployment with 90+ comprehensive tests.
+                            Comprehensive fitness platform with <strong style="color: var(--accent);">90+ tests</strong>, 
+                            <strong style="color: var(--accent);">11 controllers</strong>, AI coach, 
+                            and interactive analytics across <strong style="color: var(--accent);">8 key features</strong>.
                         </p>
                         <div class="project-tags">
                             <span class="tag">React</span>
@@ -2670,9 +2795,10 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Let's Connect</h2>
-            <p style="max-width: 600px; margin: 0 auto 2rem; color: var(--purple-light);">
-                I'm currently seeking DevOps Engineer or Software Developer opportunities. 
-                Feel free to reach out if you'd like to discuss potential collaborations or just connect!
+            <p style="max-width: 600px; margin: 0 auto 2rem; color: var(--purple-light); font-size: 1.1rem;">
+                <strong style="color: var(--accent);">Open to opportunities!</strong><br>
+                I'm actively seeking DevOps Engineer or Software Developer roles in Israel. 
+                Let's discuss how I can contribute to your team's success.
             </p>
             <div class="contact-links fade-in">
                 <a href="mailto:Lirhen2000@gmail.com" class="contact-item">
@@ -2694,6 +2820,10 @@
             </div>
         </div>
     </section>
+
+    <a href="mailto:Lirhen2000@gmail.com" class="floating-contact-btn" title="Contact Me">
+        <i class="fas fa-envelope"></i>
+    </a>
 
     <footer>
         <div class="container">
